@@ -1,0 +1,8 @@
+
+<tex2html_mydb_mark>#1#%\caption{Caption}
+    
+<tex2html_mydb_mark>#2#% citations
+
+<tex2html_mydb_mark>#3#%\bibliographystyle{plain}
+
+<tex2html_mydb_mark>#4#%\bibliography{citations}

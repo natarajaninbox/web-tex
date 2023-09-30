@@ -1,0 +1,120 @@
+\documentclass<<1>>homework<<1>>
+\begin<<261>>tex2html_deferred<<261>>\author<<2>>Course Instructors - Prof. Sangeeta, Prof. Anupa, and TA - Veejay<<2>>\end<<262>>tex2html_deferred<<262>>
+\class<<3>>Signals and Systems Laboratory<<3>>
+\date<<4>>\today<<4>>
+\title<<5>>Quiz 1<<5>>
+\address<<6>>Sardar Patel College of Engineering, Mumbai<<6>>
+\begin<<263>>tex2html_deferred<<263>>\par\end<<264>>tex2html_deferred<<264>>\graphicspath<<114>><<7>>./media/<<7>><<114>>
+\begin<<265>>tex2html_deferred<<265>>\par\end<<266>>tex2html_deferred<<266>>\begin<<8>>document<<8>> \maketitle
+\begin<<267>>tex2html_deferred<<267>>\par\end<<268>>tex2html_deferred<<268>>\question A signal given by \begin<<123>>tex2html_wrap_inline<<123>>$x(t) = a_1\sin(\omega t+\phi_1)$\end<<124>>tex2html_wrap_inline<<124>>\space is applied to a stable linear time-invariant system. Suppose the steady state output response of the system is given by \begin<<125>>tex2html_wrap_inline<<125>>$a_2F(\omega_2 t +\phi_2)$\end<<126>>tex2html_wrap_inline<<126>>. Then which of the following is true about the function \begin<<127>>tex2html_wrap_inline<<127>>$F$\end<<128>>tex2html_wrap_inline<<128>>? (\textbf<<9>>2 marks<<9>>)
+\begin<<10>>itemize<<10>>
+    \item F is not necessarily `sine' or `cosine', but must be periodic with \begin<<129>>tex2html_wrap_inline<<129>>$\omega_1=\omega_2$\end<<130>>tex2html_wrap_inline<<130>>.
+    \item F must be a `sine' or a `cosine' function with \begin<<131>>tex2html_wrap_inline<<131>>$a_1=a_2$\end<<132>>tex2html_wrap_inline<<132>>
+    \item F must be a `sine' function with \begin<<133>>tex2html_wrap_inline<<133>>$\omega_1=\omega_2$\end<<134>>tex2html_wrap_inline<<134>>\space and \begin<<135>>tex2html_wrap_inline<<135>>$\phi_1=\phi_2$\end<<136>>tex2html_wrap_inline<<136>>
+    \item F must be a `sine' or `cosine' function with \begin<<137>>tex2html_wrap_inline<<137>>$\omega_1=\omega_2$\end<<138>>tex2html_wrap_inline<<138>>.
+\end<<11>>itemize<<11>>
+\begin<<269>>tex2html_deferred<<269>>\par\end<<270>>tex2html_deferred<<270>>\question A continuous-time system is described by \begin<<139>>tex2html_wrap_inline<<139>>$y(t)=e^<<12>>-|x(t)|<<12>>$\end<<140>>tex2html_wrap_inline<<140>>, where \begin<<141>>tex2html_wrap_inline<<141>>$y(t)$\end<<142>>tex2html_wrap_inline<<142>>\space is the output and \begin<<143>>tex2html_wrap_inline<<143>>$x(t)$\end<<144>>tex2html_wrap_inline<<144>>\space is the input. The output signal \begin<<145>>tex2html_wrap_inline<<145>>$y(t)$\end<<146>>tex2html_wrap_inline<<146>>\space is bounded (\textbf<<13>>2 marks<<13>>)
+\begin<<14>>itemize<<14>>
+    \item only when \begin<<147>>tex2html_wrap_inline<<147>>$x(t)$\end<<148>>tex2html_wrap_inline<<148>>\space is bounded.
+    \item only when \begin<<149>>tex2html_wrap_inline<<149>>$x(t)$\end<<150>>tex2html_wrap_inline<<150>>\space is non-negative
+    \item only for \begin<<151>>tex2html_wrap_inline<<151>>$t \leq 0$\end<<152>>tex2html_wrap_inline<<152>>\space if \begin<<153>>tex2html_wrap_inline<<153>>$x(t)$\end<<154>>tex2html_wrap_inline<<154>>\space is bounded for \begin<<155>>tex2html_wrap_inline<<155>>$t \geq 0$\end<<156>>tex2html_wrap_inline<<156>>
+    \item even when \begin<<157>>tex2html_wrap_inline<<157>>$x(t)$\end<<158>>tex2html_wrap_inline<<158>>\space is non-negative.
+\end<<15>>itemize<<15>>
+\begin<<271>>tex2html_deferred<<271>>\par\end<<272>>tex2html_deferred<<272>>\question A system is represented by the following input-output relationship, (\textbf<<16>>2 marks<<16>>)
+\begin<<17>>align*<<17>>
+    y(t) = \int_<<18>>-\infty<<18>>^<<19>>8t<<19>>x(\tau) d \tau \quad;\quad t;SPMgt;0
+\end<<20>>align*<<20>>
+Which is true about this system?
+\begin<<21>>itemize<<21>>
+    \item Linear and Causal
+    \item Linear but not Causal
+    \item Causal but not linear
+    \item Neither causal nor linear
+\end<<22>>itemize<<22>>
+\begin<<273>>tex2html_deferred<<273>>\par\end<<274>>tex2html_deferred<<274>>\question A system is represented by the following input-output relationship, (\textbf<<23>>2 marks<<23>>)
+\begin<<24>>align*<<24>>
+    y(t) = \int_<<25>>-\infty<<25>>^t x(\tau)\cos(5\tau)d \tau \quad;\quad t;SPMgt;0
+\end<<26>>align*<<26>>
+Which is true about this system? (\textbf<<27>>Hint:<<27>> Use BIBO stability criterion to check for stability)
+\begin<<28>>itemize<<28>>
+    \item Time-invariant and stable
+    \item Time-variant and stable
+    \item Time-invariant and unstable
+    \item Time-variant and unstable
+\end<<29>>itemize<<29>>
+\begin<<275>>tex2html_deferred<<275>>\par\end<<276>>tex2html_deferred<<276>>\question Consider the signal \begin<<159>>tex2html_wrap_inline<<159>>$x(t) = \sin(6\pi t)+ \cos(8 \pi t)$\end<<160>>tex2html_wrap_inline<<160>>\space (time \begin<<161>>tex2html_wrap_inline<<161>>$'t'$\end<<162>>tex2html_wrap_inline<<162>>\space in seconds). The Nyquist sampling rate (samples/second) for the signal \begin<<163>>tex2html_wrap_inline<<163>>$y(t) = x(2t + 5)$\end<<164>>tex2html_wrap_inline<<164>>\space is, (\textbf<<30>>2 marks<<30>>)
+\begin<<31>>itemize<<31>>
+    \item 8
+    \item 12
+    \item 16
+    \item 32
+\end<<32>>itemize<<32>>
+\newpage 
+\question Determine the input-output relationship for the following system. (\textbf<<33>>3 marks<<33>>)
+\begin<<34>>figure<<34>>[h]
+    \begin<<277>>tex2html_deferred<<277>>\centering\end<<278>>tex2html_deferred<<278>>\includegraphics[width = 8 cm]<<35>>SPCE_Quiz_flowchart.png<<35>>
+    <tex2html_comment_mark>1
+\label<<36>>fig:FlowChart1<<36>>
+\end<<37>>figure<<37>>
+\question A continuous-time signal given by \begin<<165>>tex2html_wrap_inline<<165>>$x(t) = \cos(4\pi t)$\end<<166>>tex2html_wrap_inline<<166>>\space is sampled at 4 Hz (Consider the \begin<<167>>tex2html_wrap_inline<<167>>$1^<<38>>st<<38>>$\end<<168>>tex2html_wrap_inline<<168>>\space sample to be obtained at \begin<<169>>tex2html_wrap_inline<<169>>$t=0$\end<<170>>tex2html_wrap_inline<<170>>). What is the value of the discrete-time sequence \begin<<171>>tex2html_wrap_inline<<171>>$x[n]$\end<<172>>tex2html_wrap_inline<<172>>\space at \begin<<173>>tex2html_wrap_inline<<173>>$n=5$\end<<174>>tex2html_wrap_inline<<174>>? (\textbf<<39>>1 mark<<39>>)
+\begin<<40>>itemize<<40>>
+    \item \begin<<175>>tex2html_wrap_inline<<175>>$\frac<<41>>1<<41>><<115>>\sqrt<<42>>2<<42>><<115>>$\end<<176>>tex2html_wrap_inline<<176>>
+    \item \begin<<177>>tex2html_wrap_inline<<177>>$-1$\end<<178>>tex2html_wrap_inline<<178>>
+    \item \begin<<179>>tex2html_wrap_inline<<179>>$0$\end<<180>>tex2html_wrap_inline<<180>>
+    \item \begin<<181>>tex2html_wrap_inline<<181>>$1$\end<<182>>tex2html_wrap_inline<<182>>
+\end<<43>>itemize<<43>>
+\question Which of the following is true about the dirac-delta function \begin<<183>>tex2html_wrap_inline<<183>>$\delta(t)$\end<<184>>tex2html_wrap_inline<<184>>? (\textbf<<44>>1 mark<<44>>)
+\begin<<45>>itemize<<45>>
+    \item \begin<<185>>tex2html_wrap_inline<<185>>$\int_<<46>>-\infty<<46>>^<<47>>\infty<<47>>\delta(t)dt = 0$\end<<186>>tex2html_wrap_inline<<186>>
+    \item \begin<<187>>tex2html_wrap_inline<<187>>$\int_<<48>>-\infty<<48>>^<<49>>\infty<<49>>\delta(t)dt$\end<<188>>tex2html_wrap_inline<<188>>\space is not defined.
+    \item \begin<<189>>tex2html_wrap_inline<<189>>$\int_<<50>>-\infty<<50>>^<<51>>\infty<<51>>\delta(t)dt = 1$\end<<190>>tex2html_wrap_inline<<190>>
+    \item \begin<<191>>tex2html_wrap_inline<<191>>$\int_<<52>>-\infty<<52>>^<<53>>\infty<<53>>\delta(t)dt = -1$\end<<192>>tex2html_wrap_inline<<192>>
+\end<<54>>itemize<<54>>
+\begin<<279>>tex2html_deferred<<279>>\par\end<<280>>tex2html_deferred<<280>>\question Consider the input signal to a system \begin<<193>>tex2html_wrap_inline<<193>>$x(t) = e^<<55>>-2t<<55>>u(t)$\end<<194>>tex2html_wrap_inline<<194>>\space whose impulse response is \begin<<195>>tex2html_wrap_inline<<195>>$h(t)=u(t)$\end<<196>>tex2html_wrap_inline<<196>>. Compute the output response of this system. \textbf<<56>>(Hint: Continuous-time convolution)<<56>>
+\begin<<57>>itemize<<57>>
+    \item \begin<<197>>tex2html_wrap_inline<<197>>$\frac<<116>>(1-2e^<<58>>-2t<<58>>)<<116>><<59>>2<<59>>u(t)$\end<<198>>tex2html_wrap_inline<<198>>
+    \item \begin<<199>>tex2html_wrap_inline<<199>>$\frac<<117>>(1-e^<<60>>-2t<<60>>)<<117>><<61>>2<<61>>u(t)$\end<<200>>tex2html_wrap_inline<<200>>
+    \item \begin<<201>>tex2html_wrap_inline<<201>>$1-\frac<<118>>e^<<62>>-2t<<62>><<118>><<63>>2<<63>>u(t)$\end<<202>>tex2html_wrap_inline<<202>>
+    \item \begin<<203>>tex2html_wrap_inline<<203>>$(1-e^<<64>>-2t<<64>>)u(t)$\end<<204>>tex2html_wrap_inline<<204>>
+\end<<65>>itemize<<65>>
+\begin<<281>>tex2html_deferred<<281>>\par\end<<282>>tex2html_deferred<<282>>\question Which of the following signals are periodic?
+\begin<<66>>itemize<<66>>
+    \item \begin<<205>>tex2html_wrap_inline<<205>>$\sin(4\pi t)+\cos(2t)$\end<<206>>tex2html_wrap_inline<<206>>
+    \item \begin<<207>>tex2html_wrap_inline<<207>>$\sin(4\pi t)+\cos(5\pi^2 t)$\end<<208>>tex2html_wrap_inline<<208>>
+    \item \begin<<209>>tex2html_wrap_inline<<209>>$\sin(2 t)+\cos(4t)$\end<<210>>tex2html_wrap_inline<<210>>
+    \item \begin<<211>>tex2html_wrap_inline<<211>>$\sin(\pi t)+\cos\left(\frac<<67>>4<<67>><<68>>\pi<<68>>t\right)$\end<<212>>tex2html_wrap_inline<<212>>
+\end<<69>>itemize<<69>>
+\begin<<283>>tex2html_deferred<<283>>\par\end<<284>>tex2html_deferred<<284>>\question Consider a discrete-time input sequence \begin<<213>>tex2html_wrap_inline<<213>>$x[n]=\alpha^n u[n]$\end<<214>>tex2html_wrap_inline<<214>>\space fed to a system whose impulse response is \begin<<215>>tex2html_wrap_inline<<215>>$h[n] = u[n]$\end<<216>>tex2html_wrap_inline<<216>>\space defined for \begin<<217>>tex2html_wrap_inline<<217>>$n=0,1,2,3...$\end<<218>>tex2html_wrap_inline<<218>>. Compute the output sequence \begin<<219>>tex2html_wrap_inline<<219>>$y[n]$\end<<220>>tex2html_wrap_inline<<220>>\space generated by the system. (\begin<<221>>tex2html_wrap_inline<<221>>$0;SPMlt;\alpha;SPMlt;1$\end<<222>>tex2html_wrap_inline<<222>>) \textbf<<70>>(Hint: Discrete-time convolution)<<70>>
+\begin<<71>>itemize<<71>>
+    \item \begin<<223>>tex2html_wrap_inline<<223>>$y[n] = \frac<<119>>1-\alpha^<<72>>n<<72>><<119>><<73>>1-\alpha<<73>>u[n]$\end<<224>>tex2html_wrap_inline<<224>>
+    \item \begin<<225>>tex2html_wrap_inline<<225>>$y[n] = \frac<<120>>1-\alpha^<<74>>n+1<<74>><<120>><<75>>1-\alpha<<75>>u[n]$\end<<226>>tex2html_wrap_inline<<226>>
+    \item \begin<<227>>tex2html_wrap_inline<<227>>$y[n] = \frac<<121>>1-\alpha^<<76>>n+1<<76>><<121>><<77>>1-\alpha^n<<77>>u[n]$\end<<228>>tex2html_wrap_inline<<228>>
+    \item \begin<<229>>tex2html_wrap_inline<<229>>$y[n] = \left(1+\frac<<78>>1<<78>><<79>>n<<79>>\right)\frac<<122>>1-\alpha^<<80>>n<<80>><<122>><<81>>1-\alpha<<81>>u[n]$\end<<230>>tex2html_wrap_inline<<230>>
+\end<<82>>itemize<<82>>
+\begin<<285>>tex2html_deferred<<285>>\par\end<<286>>tex2html_deferred<<286>>\question Consider a zero-mean periodic signal \begin<<231>>tex2html_wrap_inline<<231>>$f(t)$\end<<232>>tex2html_wrap_inline<<232>>\space with period \begin<<233>>tex2html_wrap_inline<<233>>$'T'$\end<<234>>tex2html_wrap_inline<<234>>\space such that it has the following property,
+\begin<<83>>align*<<83>>
+    f(-t) = -f(t)
+\end<<84>>align*<<84>>
+Suppose the fourier series expansion of such a signal is given by,
+\begin<<85>>align*<<85>>
+    f(t)=\sum_<<86>>n=1<<86>>^<<87>>\infty<<87>>a_n\cos\left(\frac<<88>>2\pi n<<88>><<89>>T<<89>>t\right)+\sum_<<90>>n=1<<90>>^<<91>>\infty<<91>>b_n\sin\left(\frac<<92>>2\pi n<<92>><<93>>T<<93>>t\right)
+\end<<94>>align*<<94>>
+Which of the following is true?
+\begin<<95>>itemize<<95>>
+    \item All the coefficients of even harmonics of both sine and cosine terms must always be zero.
+    \item All the coefficients \begin<<235>>tex2html_wrap_inline<<235>>$b_n$\end<<236>>tex2html_wrap_inline<<236>>\space of the sine terms must be zero. 
+    \item All the coefficients of odd harmonics of both sine and cosine terms must always be zero.
+    \item All the coefficients \begin<<237>>tex2html_wrap_inline<<237>>$a_n$\end<<238>>tex2html_wrap_inline<<238>>\space of the cosine terms must be zero.
+\end<<96>>itemize<<96>>
+\question Suppose the output signal of a full wave rectifier is given by \begin<<239>>tex2html_wrap_inline<<239>>$f(t)$\end<<240>>tex2html_wrap_inline<<240>>, (Consider \begin<<241>>tex2html_wrap_inline<<241>>$f(t)$\end<<242>>tex2html_wrap_inline<<242>>\space to be a full-wave rectified sine wave with amplitude \begin<<243>>tex2html_wrap_inline<<243>>$'A'$\end<<244>>tex2html_wrap_inline<<244>>\space and \begin<<245>>tex2html_wrap_inline<<245>>$f(0)=0$\end<<246>>tex2html_wrap_inline<<246>>). The fourier series expansion of such a signal is given by,
+\begin<<97>>align*<<97>>
+    f(t)=a_0+\sum_<<98>>n=1<<98>>^<<99>>\infty<<99>>a_n\cos\left(\frac<<100>>2\pi n<<100>><<101>>T<<101>>t\right)+\sum_<<102>>n=1<<102>>^<<103>>\infty<<103>>b_n\sin\left(\frac<<104>>2\pi n<<104>><<105>>T<<105>>t\right)
+\end<<106>>align*<<106>>
+Which of the following is true?
+\begin<<107>>itemize<<107>>
+    \item \begin<<247>>tex2html_wrap_inline<<247>>$a_0$\end<<248>>tex2html_wrap_inline<<248>>\space is zero
+    \item \begin<<249>>tex2html_wrap_inline<<249>>$a_0$\end<<250>>tex2html_wrap_inline<<250>>\space is non-zero and its value is given by \begin<<251>>tex2html_wrap_inline<<251>>$a_0=\frac<<108>>2A<<108>><<109>>\pi<<109>>$\end<<252>>tex2html_wrap_inline<<252>>
+    \item \begin<<253>>tex2html_wrap_inline<<253>>$a_0$\end<<254>>tex2html_wrap_inline<<254>>\space is non-zero and its value is given by \begin<<255>>tex2html_wrap_inline<<255>>$a_0=\frac<<110>>A<<110>><<111>>2\pi<<111>>$\end<<256>>tex2html_wrap_inline<<256>>
+    \item \begin<<257>>tex2html_wrap_inline<<257>>$a_n = 0$\end<<258>>tex2html_wrap_inline<<258>>, for all \begin<<259>>tex2html_wrap_inline<<259>>$n;SPMgt;0$\end<<260>>tex2html_wrap_inline<<260>>
+\end<<112>>itemize<<112>>
+\begin<<287>>tex2html_deferred<<287>>\par\end<<288>>tex2html_deferred<<288>>\end<<113>>document<<113>>
