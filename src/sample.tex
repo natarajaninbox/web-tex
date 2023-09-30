@@ -1,136 +1,107 @@
-\documentclass{homework}
-\author{Course Instructors - Prof. Sangeeta, Prof. Anupa, and TA - Veejay}
-\class{Signals and Systems Laboratory}
-\date{\today}
-\title{Quiz 1}
-\address{Sardar Patel College of Engineering, Mumbai}
+\documentclass{article}
+\usepackage{epsfig}
+\usepackage{hyperref}
+\renewcommand{\baselinestretch}{1}
+\setlength{\textheight}{9in}
+\setlength{\textwidth}{6.5in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\topmargin}{0in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\evensidemargin}{0in}
+\setlength{\parindent}{.3in}
+\begin{document}
 
-\graphicspath{{./media/}}
+\leftline{Pat Q.~Student}
+\leftline{AME 20231}
+\leftline{13 January 2022}
 
-\begin{document} \maketitle
+\medskip
+This is a sample file in the text formatter \LaTeX.
+I require you to use it for the following reasons:
 
-\question A signal given by $x(t) = a_1\sin(\omega t+\phi_1)$ is applied to a stable linear time-invariant system. Suppose the steady state output response of the system is given by $a_2F(\omega_2 t +\phi_2)$. Then which of the following is true about the function $F$? (\textbf{2 marks})
 \begin{itemize}
-    \item F is not necessarily `sine' or `cosine', but must be periodic with $\omega_1=\omega_2$.
-    \item F must be a `sine' or a `cosine' function with $a_1=a_2$
-    \item F must be a `sine' function with $\omega_1=\omega_2$ and $\phi_1=\phi_2$
-    \item F must be a `sine' or `cosine' function with $\omega_1=\omega_2$.
-\end{itemize}
 
-\question A continuous-time system is described by $y(t)=e^{-|x(t)|}$, where $y(t)$ is the output and $x(t)$ is the input. The output signal $y(t)$ is bounded (\textbf{2 marks})
-\begin{itemize}
-    \item only when $x(t)$ is bounded.
-    \item only when $x(t)$ is non-negative
-    \item only for $t \leq 0$ if $x(t)$ is bounded for $t \geq 0$
-    \item even when $x(t)$ is non-negative.
-\end{itemize}
+\item{It produces the best output of text, figures,
+      and equations of any
+      program I've seen.}
 
-\question A system is represented by the following input-output relationship, (\textbf{2 marks})
-\begin{align*}
-    y(t) = \int_{-\infty}^{8t}x(\tau) d \tau \quad;\quad t>0
-\end{align*}
-Which is true about this system?
-\begin{itemize}
-    \item Linear and Causal
-    \item Linear but not Causal
-    \item Causal but not linear
-    \item Neither causal nor linear
-\end{itemize}
+\item{It is machine-independent. It runs on Linux, Macintosh (see {\tt TeXShop}), and Windows (see {\tt MiKTeX}) machines.  There are web-based versions, \href{https://www.overleaf.com}{\tt https://www.overleaf.com}.
+     You can e-mail {\tt ASCII} text versions of most relevant files.}
 
-\question A system is represented by the following input-output relationship, (\textbf{2 marks})
-\begin{align*}
-    y(t) = \int_{-\infty}^t x(\tau)\cos(5\tau)d \tau \quad;\quad t>0
-\end{align*}
-Which is true about this system? (\textbf{Hint:} Use BIBO stability criterion to check for stability)
-\begin{itemize}
-    \item Time-invariant and stable
-    \item Time-variant and stable
-    \item Time-invariant and unstable
-    \item Time-variant and unstable
-\end{itemize}
+\item{It is the tool of choice for many research
+     scientists and engineers.
+     Many journals accept 
+     \LaTeX~submissions, and many books
+     are written in \LaTeX.}
 
-\question Consider the signal $x(t) = \sin(6\pi t)+ \cos(8 \pi t)$ (time $'t'$ in seconds). The Nyquist sampling rate (samples/second) for the signal $y(t) = x(2t + 5)$ is, (\textbf{2 marks})
-\begin{itemize}
-    \item 8
-    \item 12
-    \item 16
-    \item 32
 \end{itemize}
-\newpage 
-\question Determine the input-output relationship for the following system. (\textbf{3 marks})
-\begin{figure}[h]
-    \centering
-    \includegraphics[width = 8 cm]{SPCE_Quiz_flowchart.png}
-    %\caption{Caption}
-    \label{fig:FlowChart1}
+\medskip
+Some basic instructions are given next.
+Put your text in here.  You can be a little sloppy    about
+spacing.  It adjusts the text to look good.
+{\small You can make the text smaller.}
+{\tiny You can make the text tiny.}
+
+Skip a line for a new paragraph.   
+You can use italics ({\em e.g.} {\em  Thermodynamics is everywhere}) or {\bf bold}.
+Greek letters are a snap: $\Psi$, $\psi$,
+$\Phi$, $\phi$.  Equations within text are easy---
+A well known Maxwell thermodynamic relation is
+$\left.{\partial T \over \partial P}\right|_{s} = 
+\left.{\partial v \over \partial s}\right|_{P}$.
+You can also set aside equations like so:
+\begin{eqnarray}
+du &=& T\ ds -P\ dv, \qquad \mbox{first law.}\label{fl}\\
+ds &\ge& {\delta q \over T}.\qquad  \qquad \mbox{second law.} \label{sl}
+\end{eqnarray}
+Eq.~(\ref{fl}) is the first law.
+Eq.~(\ref{sl}) is the second law.
+References\footnote{Lamport, L., 1986, {\em \LaTeX: User's Guide \& Reference Manual},
+    Addison-Wesley: Reading, Massachusetts.}
+are available. 
+If you have a postscript file, say {\tt sample.figure.eps}, in the same local directory,
+you can insert the file as a figure.  Figure \ref{sample}, below, plots an isotherm for air modeled as an ideal gas. 
+\begin{figure}[ht]
+\epsfxsize=2.5in
+\centerline{\epsffile{sample.figure.eps}}
+\caption{Sample figure plotting $T=300~{\rm K}$ isotherm for air when modeled as an ideal gas.}
+\label{sample}
 \end{figure}
-\question A continuous-time signal given by $x(t) = \cos(4\pi t)$ is sampled at 4 Hz (Consider the $1^{st}$ sample to be obtained at $t=0$). What is the value of the discrete-time sequence $x[n]$ at $n=5$? (\textbf{1 mark})
-\begin{itemize}
-    \item $\frac{1}{\sqrt{2}}$
-    \item $-1$
-    \item $0$
-    \item $1$
-\end{itemize}
-\question Which of the following is true about the dirac-delta function $\delta(t)$? (\textbf{1 mark})
-\begin{itemize}
-    \item $\int_{-\infty}^{\infty}\delta(t)dt = 0$
-    \item $\int_{-\infty}^{\infty}\delta(t)dt$ is not defined.
-    \item $\int_{-\infty}^{\infty}\delta(t)dt = 1$
-    \item $\int_{-\infty}^{\infty}\delta(t)dt = -1$
-\end{itemize}
 
-\question Consider the input signal to a system $x(t) = e^{-2t}u(t)$ whose impulse response is $h(t)=u(t)$. Compute the output response of this system. \textbf{(Hint: Continuous-time convolution)}
-\begin{itemize}
-    \item $\frac{(1-2e^{-2t})}{2}u(t)$
-    \item $\frac{(1-e^{-2t})}{2}u(t)$
-    \item $1-\frac{e^{-2t}}{2}u(t)$
-    \item $(1-e^{-2t})u(t)$
-\end{itemize}
+\medskip
+\leftline{\em Running \LaTeX}
+\medskip
 
-\question Which of the following signals are periodic?
-\begin{itemize}
-    \item $\sin(4\pi t)+\cos(2t)$
-    \item $\sin(4\pi t)+\cos(5\pi^2 t)$
-    \item $\sin(2 t)+\cos(4t)$
-    \item $\sin(\pi t)+\cos\left(\frac{4}{\pi}t\right)$
-\end{itemize}
+You can create a \LaTeX~file with any text editor ({\tt vi}, {\tt emacs}, {\tt gedit}, 
+etc.). 
+To get a document, you need to run the \LaTeX~application
+on the text file.  The text file must have the suffix ``{\tt .tex}''
+On a Linux cluster machine, this is done via the command
 
-\question Consider a discrete-time input sequence $x[n]=\alpha^n u[n]$ fed to a system whose impulse response is $h[n] = u[n]$ defined for $n=0,1,2,3...$. Compute the output sequence $y[n]$ generated by the system. ($0<\alpha<1$) \textbf{(Hint: Discrete-time convolution)}
-\begin{itemize}
-    \item $y[n] = \frac{1-\alpha^{n}}{1-\alpha}u[n]$
-    \item $y[n] = \frac{1-\alpha^{n+1}}{1-\alpha}u[n]$
-    \item $y[n] = \frac{1-\alpha^{n+1}}{1-\alpha^n}u[n]$
-    \item $y[n] = \left(1+\frac{1}{n}\right)\frac{1-\alpha^{n}}{1-\alpha}u[n]$
-\end{itemize}
+\medskip
+{\tt latex file.tex}
 
-\question Consider a zero-mean periodic signal $f(t)$ with period $'T'$ such that it has the following property,
-\begin{align*}
-    f(-t) = -f(t)
-\end{align*}
-Suppose the fourier series expansion of such a signal is given by,
-\begin{align*}
-    f(t)=\sum_{n=1}^{\infty}a_n\cos\left(\frac{2\pi n}{T}t\right)+\sum_{n=1}^{\infty}b_n\sin\left(\frac{2\pi n}{T}t\right)
-\end{align*}
-Which of the following is true?
-\begin{itemize}
-    \item All the coefficients of even harmonics of both sine and cosine terms must always be zero.
-    \item All the coefficients $b_n$ of the sine terms must be zero. 
-    \item All the coefficients of odd harmonics of both sine and cosine terms must always be zero.
-    \item All the coefficients $a_n$ of the cosine terms must be zero.
-\end{itemize}
-\question Suppose the output signal of a full wave rectifier is given by $f(t)$, (Consider $f(t)$ to be a full-wave rectified sine wave with amplitude $'A'$ and $f(0)=0$). The fourier series expansion of such a signal is given by,
-\begin{align*}
-    f(t)=a_0+\sum_{n=1}^{\infty}a_n\cos\left(\frac{2\pi n}{T}t\right)+\sum_{n=1}^{\infty}b_n\sin\left(\frac{2\pi n}{T}t\right)
-\end{align*}
-Which of the following is true?
-\begin{itemize}
-    \item $a_0$ is zero
-    \item $a_0$ is non-zero and its value is given by $a_0=\frac{2A}{\pi}$
-    \item $a_0$ is non-zero and its value is given by $a_0=\frac{A}{2\pi}$
-    \item $a_n = 0$, for all $n>0$
-\end{itemize}
-% citations
-%\bibliographystyle{plain}
-%\bibliography{citations}
+\medskip
+\noindent
+This generates three files: {\tt file.dvi}, {\tt file.aux},
+and {\tt file.log}.  The most important is {\tt file.dvi}. 
+
+\medskip
+\noindent
+The finished product can be previewed in the following way.
+Execute the commands:
+
+\medskip
+
+{\tt dvipdf file.dvi}\hspace{1.9in}{\em Linux System}
+
+\medskip
+\noindent
+This command generates {\tt file.pdf}, which can be viewed with many standard tools.
+Alternatively, you can use {\tt TeXShop} on a Macintosh or {\tt MiKTeX} on a Windows-based machine. {\em Another very good and modern option is the web-based} \href{https://www.overleaf.com}{\tt https://www.overleaf.com}.
+The {\tt .tex} file must have a closing statement as
+below.
+
 
 \end{document}
