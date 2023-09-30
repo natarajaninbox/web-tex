@@ -26,7 +26,15 @@ https://linux.die.net/man/1/latex2html
 
 
 
-natarajaninbox.github.io
+https://natarajaninbox.github.io/web-tex/web/sample.html
+
 
 
 latex2html -split 0 -no_navigation -dir web src/sample.tex
+
+git add . && git commit -m "testing" && git push
+
+
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
