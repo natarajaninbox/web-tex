@@ -1,1 +1,5 @@
-homework
+article 12pt,
+amsmath 
+graphicx 
+hyperref 
+inputenc latin1
