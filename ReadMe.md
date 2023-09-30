@@ -26,3 +26,7 @@ https://linux.die.net/man/1/latex2html
 
 
 
+natarajaninbox.github.io
+
+
+latex2html -split 0 -no_navigation -dir web src/sample.tex
