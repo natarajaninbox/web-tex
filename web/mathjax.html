@@ -21,11 +21,47 @@
         </tr>
         <tr>
           <td>
-            \begin{equation} f(x) = \frac{1}{2\pi i} \oint_C \frac{f(z)}{z - x}
-            \, dz \end{equation} \begin{align*} &f(x) \text{ is a complex
-            function,} \\ &C \text{ is a closed contour in the complex plane,}
-            \\ &i \text{ is the imaginary unit,} \\ &z \text{ is a complex
-            variable, and} \\ &x \text{ is a complex number.} \end{align*}
+            \begin{align}
+            \label{eqn:SystemDescription}
+            \centering
+            \dot{X} = g(X,U) \quad~;~\quad X \in Q \subseteq \mathbb{R}^n, U\in [U_m,U_M]\subset\mathbb{R}^m \quad~;~\quad m < n
+            \end{align}
+            Here, $g(X)\in \mathbb{R}^{n\times m}$ is typically a lipschitz function. The configuration space is given by $\mathcal{Q}$ and the set of obstacles is denoted by $\mathcal{O}_i$. From these definitions, the free configuration space $\mathcal{Q}_{\text{free}}$ is obtained as follows,
+            \begin{align}
+                \label{eqn:FreeWorkspaces}
+                \centering
+                \mathcal{Q}_{\text{free}} = \{X\in\mathcal{Q}\;|\; X\cap\left(Q\cap (\cup_i \mathcal{O}_i)\right) = \emptyset \}
+            \end{align}
+            
+            Suppose the initial conditions are given by $X_0$ at an initial time instant $t_0$ and the target goal is given by $X_f$ at a time instant $t=t_f$, a candidate motion plan $X_{\text{ref}}(t) \in Q$ is deemed admissible for navigation under the following conditions,
+            \begin{itemize}
+                \item $X_{\text{ref}}(t)$ is a solution to (\ref{eqn:SystemDescription}), with $X_{\text{ref}}(t_0) = X_0$ and $X_{\text{ref}}(t_f) = X_f$.
+                \item $X_{\text{ref}}(t) \in \mathcal{Q}_{\text{free}},\; \forall t\in[t_0,t_f]$  
+            \end{itemize}
+            \textbf{Under such conditions, the resulting motion plan $X_{\text{ref}}(t)$ is compliant for tracking through a careful design of a low-level tracking controller}. (The final time argument condition could be optionally relaxed if required). \textit{During operation in unknown environments, such amiable motion plans must be generated during run-time to accomplish the mission objectives based on the sensed information.}
+            \begin{figure}
+                \centering
+                \includegraphics[scale=0.5]{media/turtlebot3_burger_components.png}
+                \caption{Caption}
+                \label{fig:enter-label}
+            \end{figure}
+            
+            \subsection{Integrated Planning and Control (IPC)}
+            IPC algorithms \textbf{seek motion plans as a sequence of feedback controllers over domains} in the navigable regions of the environment, rather than an explicit path/trajectory in the configuration space of the system. The IPC motion plans exhibit the following properties,
+            \begin{itemize}
+                \item Each domain $\mathcal{D}_k$ is positively invariant under \textbf{feedback controller $\mathcal{F}_k$}, and is associated with a goal set $\mathcal{W}_k \subset \mathcal{D}_k$. Essentially, any initial state $X(t)\in \mathcal{D}_k$ evolves such that it converges onto $\mathcal{W}_k$ under the influence of $\mathcal{F}_k$ while remaining within $\mathcal{D}_k$ during the entire duration. Given a system as in (\ref{eqn:SystemDescription}), the following holds true,
+                \begin{itemize}
+                    \item If $X(t=t_0) \in \mathcal{D}_k$, then $X(t=t_f) \in \mathcal{W}_k$ and $X(t)\in \mathcal{D}_k, \;\forall t \in [t_0,t_f]$
+                \end{itemize}
+                \item The domains $\mathcal{D}_k$ are sequenced in such a way that their goal sets $\mathcal{W}_k$ lies on \textbf{at least one other domain $\mathcal{D}_i$}, and each $\mathcal{D}_i \subset{Q}_{\text{free}}$. (This ensures overall connectivity between the domains $\mathcal{D}_k$)
+                \begin{align*}
+                    \mathcal{W}_k \in \mathcal{D}_i, \quad i \neq k
+                \end{align*}
+                \begin{itemize}
+                    \item The initial configuration $\mathcal{S}$ in the navigation query is such that, $\mathcal{S}\in \bigcup \mathcal{D}_k$.
+                    \item The final configuration $\mathcal{T}$ in the navigation query is such that $\mathcal{T} \in \mathcal{W}_k$ for some $`k'$.
+                \end{itemize}
+            \end{itemize}
           </td>
         </tr>
       </table>
