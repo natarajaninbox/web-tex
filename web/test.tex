@@ -1,0 +1,82 @@
+\documentclass[10pt]{article}%
+\usepackage[a4paper, top=2.5cm, bottom=2.5cm, left=1.75cm, right=2.25cm]%
+{geometry}
+
+\title{Nomenclature IROS 1}
+\author{Veejay Karthik}
+\date{January 2023}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{tabularx}
+\begin{document}
+
+\maketitle
+
+%\section{Nomenclature}
+
+\begin{tabularx}{1\textwidth} { 
+  | >{\raggedright\arraybackslash}X 
+  | >{\centering\arraybackslash}X 
+  | >{\raggedleft\arraybackslash}X | }
+ \hline
+ \textbf{S.No} & \textbf{Variable} & \textbf{Description}\\
+ \hline
+1 &$\mathcal{R}$ * &Robot Position\\
+\hline
+2 &$(d_i,\theta_i)$ * &Range,Angle Info Pairs\\
+\hline
+3 &N * &Total number of data points from the sensor\\
+\hline
+4   &$\mathcal{S}$ * &Start\\
+\hline
+5   &$\mathcal{T}$ * &Target \\
+\hline
+6 &$\mathcal{G}_i$ *  &Candidate Gap\\
+\hline
+7 &$(\mathcal{G}_i^{os},\mathcal{G}_i^{cs})$ * &Sides of a gap\\
+\hline
+8 &$\theta_{\mathcal{G}_i}$ * &Angular distance of gap to target\\
+\hline
+9 &$\theta_{\mathcal{G}_{closest}}$ * &Angle corresponding to closest gap to goal\\
+\hline
+10 &$\mathcal{G}_{closest}$ * &Closest gap to goal\\
+\hline
+11   & $\mathcal{T}_j$ * & Intermediate targets\\
+\hline
+ 12   & $R$ ** & State - Radial Distance  \\
+\hline
+13   & $\psi$ ** & State - Relative Bearing \\
+\hline
+14 & $\mathcal{W}_i$ ** &Waypoint/Reference Point\\
+\hline
+15   & $U(R,\psi,\{\mathcal{W}_i\})$ ** & Feedback motion plan in the space of admissible control inputs \\
+\hline
+16   & $v$ *** & Control - Linear Velocity\\
+\hline
+17   & $\omega$ *** & Control - Angular Velocity\\
+\hline
+18  &$\sigma$ *** & Sliding Variable\\
+\hline
+19 &$(R_0,\psi_0)$ *** &Initial distance and bearing of the robot relative to the waypoint\\
+\hline
+20 &$V$ *** &Lyapunov Function\\
+\hline
+21 &$L^{-}(V,V(R_0))$ *** &Invariant region induced by the control design relative to waypoint\\
+\hline
+22 &$\partial L^{-}$ *** &Boundary of $L^{-}(V,V(R_0))$\\
+\hline
+23 &$(d,i)$ **** &distance ($d$)  of a candidate waypoint in the direction referenced by range index $i$\\
+\hline
+24 &$[i_{min},i_{max}]$ **** &Range indices between which the range measurements should be checked if an invariant region could be constructed\\
+\hline
+25 & $\zeta(i)$ **** &Planner Function - Mapping from range indices ($i$) to the maximum distance at which a waypoint can be picked at that index\\
+\hline
+26 &$\{\mathcal{W}^c(\zeta)\}$ ***** &Set of candidate waypoints around the robot\\
+\hline
+27 &$\mathcal{W}_{i+1}$ ***** &Optimal waypoint picked for navigation\\
+\hline
+28 &$d(.,.)$ ***** &Euclidean Distance Function\\
+\hline
+\end{tabularx}
+The variables are employed in the sections below,
+\newline Preliminaries - *, Problem Formulation - **, Control Design - ***, Planner Function - ****, IPC-A - *****
+\end{document}
