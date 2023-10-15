@@ -1,107 +1,90 @@
-\documentclass{article}
-\usepackage{epsfig}
-\usepackage{hyperref}
-\renewcommand{\baselinestretch}{1}
-\setlength{\textheight}{9in}
-\setlength{\textwidth}{6.5in}
-\setlength{\headheight}{0in}
-\setlength{\headsep}{0in}
-\setlength{\topmargin}{0in}
-\setlength{\oddsidemargin}{0in}
-\setlength{\evensidemargin}{0in}
-\setlength{\parindent}{.3in}
-\begin{document}
-
-\leftline{Pat Q.~Student}
-\leftline{AME 20231}
-\leftline{13 January 2022}
-
-\medskip
-This is a sample file in the text formatter \LaTeX.
-I require you to use it for the following reasons:
-
-\begin{itemize}
-
-\item{It produces the best output of text, figures,
-      and equations of any
-      program I've seen.}
-
-\item{It is machine-independent. It runs on Linux, Macintosh (see {\tt TeXShop}), and Windows (see {\tt MiKTeX}) machines.  There are web-based versions, \href{https://www.overleaf.com}{\tt https://www.overleaf.com}.
-     You can e-mail {\tt ASCII} text versions of most relevant files.}
-
-\item{It is the tool of choice for many research
-     scientists and engineers.
-     Many journals accept 
-     \LaTeX~submissions, and many books
-     are written in \LaTeX.}
-
-\end{itemize}
-\medskip
-Some basic instructions are given next.
-Put your text in here.  You can be a little sloppy    about
-spacing.  It adjusts the text to look good.
-{\small You can make the text smaller.}
-{\tiny You can make the text tiny.}
-
-Skip a line for a new paragraph.   
-You can use italics ({\em e.g.} {\em  Thermodynamics is everywhere}) or {\bf bold}.
-Greek letters are a snap: $\Psi$, $\psi$,
-$\Phi$, $\phi$.  Equations within text are easy---
-A well known Maxwell thermodynamic relation is
-$\left.{\partial T \over \partial P}\right|_{s} = 
-\left.{\partial v \over \partial s}\right|_{P}$.
-You can also set aside equations like so:
-\begin{eqnarray}
-du &=& T\ ds -P\ dv, \qquad \mbox{first law.}\label{fl}\\
-ds &\ge& {\delta q \over T}.\qquad  \qquad \mbox{second law.} \label{sl}
-\end{eqnarray}
-Eq.~(\ref{fl}) is the first law.
-Eq.~(\ref{sl}) is the second law.
-References\footnote{Lamport, L., 1986, {\em \LaTeX: User's Guide \& Reference Manual},
-    Addison-Wesley: Reading, Massachusetts.}
-are available. 
-If you have a postscript file, say {\tt sample.figure.eps}, in the same local directory,
-you can insert the file as a figure.  Figure \ref{sample}, below, plots an isotherm for air modeled as an ideal gas. 
-\begin{figure}[ht]
-\epsfxsize=2.5in
-\centerline{\epsffile{sample.figure.eps}}
-\caption{Sample figure plotting $T=300~{\rm K}$ isotherm for air when modeled as an ideal gas.}
-\label{sample}
-\end{figure}
-
-\medskip
-\leftline{\em Running \LaTeX}
-\medskip
-
-You can create a \LaTeX~file with any text editor ({\tt vi}, {\tt emacs}, {\tt gedit}, 
-etc.). 
-To get a document, you need to run the \LaTeX~application
-on the text file.  The text file must have the suffix ``{\tt .tex}''
-On a Linux cluster machine, this is done via the command
-
-\medskip
-{\tt latex file.tex}
-
-\medskip
-\noindent
-This generates three files: {\tt file.dvi}, {\tt file.aux},
-and {\tt file.log}.  The most important is {\tt file.dvi}. 
-
-\medskip
-\noindent
-The finished product can be previewed in the following way.
-Execute the commands:
-
-\medskip
-
-{\tt dvipdf file.dvi}\hspace{1.9in}{\em Linux System}
-
-\medskip
-\noindent
-This command generates {\tt file.pdf}, which can be viewed with many standard tools.
-Alternatively, you can use {\tt TeXShop} on a Macintosh or {\tt MiKTeX} on a Windows-based machine. {\em Another very good and modern option is the web-based} \href{https://www.overleaf.com}{\tt https://www.overleaf.com}.
-The {\tt .tex} file must have a closing statement as
-below.
-
-
-\end{document}
+    \documentclass{article}
+    \usepackage[a4paper, top=2.25cm, bottom=2.5cm, left=2.25cm, right=2.25cm]%
+    {geometry}
+    \usepackage{amsfonts}   % if you want the fonts
+    \usepackage{amssymb}    % if you want extra symbols
+    \usepackage{setspace}
+    \usepackage{amsmath}
+    \usepackage{mathtools}
+    \usepackage{amssymb}
+    \usepackage[export]{adjustbox}
+    \setlength{\parindent}{0in}
+    \usepackage[utf8]{inputenc}
+    \usepackage[english]{babel}
+    \usepackage{hyperref}
+    \usepackage{graphicx}
+    \usepackage[dvipsnames]{xcolor}
+    \usepackage{hyperref}
+    % Package to place figures where you want them.
+    \usepackage{float}
+    \usepackage{array}
+    
+    \newcommand{\htmlquad}{\space{0.5em}}
+    
+    \usepackage{subfig,wrapfig}
+    \usepackage[
+    %backend=biber,
+    %style=alphabetic,
+    sorting=none
+    ]{biblatex}
+    \bibliography{references}  
+    
+    \begin{document}
+    \title{Integrated Control and Planning for Mobile Robots}
+    \author{Veejay Karthik J\\
+    Systems and Control Engineering\\
+    IIT Bombay}
+    \date{August 2023}
+    
+    
+    \maketitle
+    
+    \section{Motivation}
+    
+    Mobile Robots are a class of \textbf{underactuated} systems with inherent \textbf{non-holonomic constraints} that restrict their maneuverability. In practice, they are often deployed in space-constrained operating workspaces. Therefore, motion planning for such systems becomes a complex task, and it is significantly challenging when the exact obstacle configuration is not known beforehand. The mathematical models (unicycle, bicycle,etc) for mobile robots are typically driftless , and exhibit the following structure,
+    \begin{align}
+    \label{eqn:SystemDescription}
+    \centering
+    \dot{X} = g(X,U) \quad~;~\quad X \in Q \subseteq \mathbb{R}^n, U\in [U_m,U_M]\subset\mathbb{R}^m \quad~;~\quad m < n
+    \end{align}
+    Here, $g(X)\in \mathbb{R}^{n\times m}$ is typically a lipschitz function. The configuration space is given by $\mathcal{Q}$ and the set of obstacles is denoted by $\mathcal{O}_i$. From these definitions, the free configuration space $\mathcal{Q}_{\text{free}}$ is obtained as follows,
+    \begin{align}
+        \label{eqn:FreeWorkspaces}
+        \centering
+        \mathcal{Q}_{\text{free}} = \{X\in\mathcal{Q}\;|\; X\cap\left(Q\cap (\cup_i \mathcal{O}_i)\right) = \emptyset \}
+    \end{align}
+    
+    Suppose the initial conditions are given by $X_0$ at an initial time instant $t_0$ and the target goal is given by $X_f$ at a time instant $t=t_f$, a candidate motion plan $X_{\text{ref}}(t) \in Q$ is deemed admissible for navigation under the following conditions,
+    \begin{itemize}
+        \item $X_{\text{ref}}(t)$ is a solution to (\ref{eqn:SystemDescription}), with $X_{\text{ref}}(t_0) = X_0$ and $X_{\text{ref}}(t_f) = X_f$.
+        \item $X_{\text{ref}}(t) \in \mathcal{Q}_{\text{free}},\; \forall t\in[t_0,t_f]$  
+    \end{itemize}
+    \textbf{Under such conditions, the resulting motion plan $X_{\text{ref}}(t)$ is compliant for tracking through a careful design of a low-level tracking controller}. (The final time argument condition could be optionally relaxed if required). \textit{During operation in unknown environments, such amiable motion plans must be generated during run-time to accomplish the mission objectives based on the sensed information.}
+    \begin{figure}
+        \centering
+        \includegraphics[scale=0.5]{media/turtlebot3_burger_components.png}
+        \caption{Caption}
+        \label{fig:enter-label}
+    \end{figure}
+    
+    \subsection{Integrated Planning and Control (IPC)}
+    IPC algorithms \textbf{seek motion plans as a sequence of feedback controllers over domains} in the navigable regions of the environment, rather than an explicit path/trajectory in the configuration space of the system. The IPC motion plans exhibit the following properties,
+    \begin{itemize}
+        \item Each domain $\mathcal{D}_k$ is positively invariant under \textbf{feedback controller $\mathcal{F}_k$}, and is associated with a goal set $\mathcal{W}_k \subset \mathcal{D}_k$. Essentially, any initial state $X(t)\in \mathcal{D}_k$ evolves such that it converges onto $\mathcal{W}_k$ under the influence of $\mathcal{F}_k$ while remaining within $\mathcal{D}_k$ during the entire duration. Given a system as in (\ref{eqn:SystemDescription}), the following holds true,
+        \begin{itemize}
+            \item If $X(t=t_0) \in \mathcal{D}_k$, then $X(t=t_f) \in \mathcal{W}_k$ and $X(t)\in \mathcal{D}_k, \;\forall t \in [t_0,t_f]$
+        \end{itemize}
+        \item The domains $\mathcal{D}_k$ are sequenced in such a way that their goal sets $\mathcal{W}_k$ lies on \textbf{at least one other domain $\mathcal{D}_i$}, and each $\mathcal{D}_i \subset{Q}_{\text{free}}$. (This ensures overall connectivity between the domains $\mathcal{D}_k$)
+        \begin{align*}
+            \mathcal{W}_k \in \mathcal{D}_i, \quad i \neq k
+        \end{align*}
+        \begin{itemize}
+            \item The initial configuration $\mathcal{S}$ in the navigation query is such that, $\mathcal{S}\in \bigcup \mathcal{D}_k$.
+            \item The final configuration $\mathcal{T}$ in the navigation query is such that $\mathcal{T} \in \mathcal{W}_k$ for some $`k'$.
+        \end{itemize}
+    \end{itemize}
+    Depending on the current state of the system, the $\mathcal{F}_k$ associated with the corresponding $\mathcal{D}_k$ is applied to the system. Suppose the domains $\mathcal{D}_k$ are sequenced in such a way that each $\mathcal{W}_k$ lies on a unique $\mathcal{D}_i, \; i\neq k$, the system's trajectories are guaranteed to safely converge onto $\mathcal{T}$ when the above-mentioned structures are established.
+    \newline 
+    \newline Mathematically, the geometric structure of $\mathcal{D}_k$ is a consequence of the underlying system dynamics for which $\mathcal{F}_k$ is designed for stability. \textbf{Essentially, $\mathcal{D}_k$ can be thought of as a geometric manifestation of the feedback controller $\mathcal{F}_i$. Therefore, given the existence of a feedback controller, the problem of mobile robot navigation effectively becomes a problem of computational geometry (involving the sequencing of $\mathcal{D}_k$) which can often be solved much faster than optimization/optimal control problems.} This can potentially suit real-time implementations where online decision-making in the face of uncertainties is vital during operation in unknown/dynamic environments.
+    \printbibliography
+    \end{document}

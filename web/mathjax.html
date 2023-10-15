@@ -11,9 +11,7 @@
     ></script>
   </head>
   <body>
-    \documentclass{article}
-    \usepackage[a4paper, top=2.25cm, bottom=2.5cm, left=2.25cm, right=2.25cm]%
-    {geometry}
+  
     \usepackage{amsfonts}   % if you want the fonts
     \usepackage{amssymb}    % if you want extra symbols
     \usepackage{setspace}
@@ -42,7 +40,7 @@
     ]{biblatex}
     \bibliography{references}  
     
-    \begin{document}
+    
     \title{Integrated Control and Planning for Mobile Robots}
     \author{Veejay Karthik J\\
     Systems and Control Engineering\\
@@ -99,8 +97,8 @@
     Depending on the current state of the system, the $\mathcal{F}_k$ associated with the corresponding $\mathcal{D}_k$ is applied to the system. Suppose the domains $\mathcal{D}_k$ are sequenced in such a way that each $\mathcal{W}_k$ lies on a unique $\mathcal{D}_i, \; i\neq k$, the system's trajectories are guaranteed to safely converge onto $\mathcal{T}$ when the above-mentioned structures are established.
     \newline 
     \newline Mathematically, the geometric structure of $\mathcal{D}_k$ is a consequence of the underlying system dynamics for which $\mathcal{F}_k$ is designed for stability. \textbf{Essentially, $\mathcal{D}_k$ can be thought of as a geometric manifestation of the feedback controller $\mathcal{F}_i$. Therefore, given the existence of a feedback controller, the problem of mobile robot navigation effectively becomes a problem of computational geometry (involving the sequencing of $\mathcal{D}_k$) which can often be solved much faster than optimization/optimal control problems.} This can potentially suit real-time implementations where online decision-making in the face of uncertainties is vital during operation in unknown/dynamic environments.
-    \printbibliography
-    \end{document}
+
+
     
   </body>
 </html>
