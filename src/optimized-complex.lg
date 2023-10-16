@@ -186,7 +186,7 @@ Css: .wrapfig-r .caption, .wrapfig-ri .caption, .wrapfig-ir .caption, .wrapfig-r
 Css: dt.printshorthands{float:left; clear:left; margin-right:1em;}
 Css: dd.thebibliography {margin-left: 2.5em;}
 Css: dt.thebibliography {float:left; clear:left; margin-right:1em;}
-Css: table, td {text-align: center;}
+File: mycustom.css
 Css: span#textcolor1{color:#0000FF}
 File: media/turtlebot3_burger_components.png
 --- characters ---

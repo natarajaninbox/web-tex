@@ -33,8 +33,8 @@ natarajanselvaraj@NLWQWFT713  ~/GitHub/web-tex/src   main  pwd
 ```
     
     # Remove other/unwanted compiled files
-    find . -maxdepth 1 -type f ! -name "*.tex" ! -name "*.cfg" -exec rm {} \;
-
+    find . -maxdepth 1 -type f ! -name "*.tex" ! -name "*.cfg" ! -name "*.css"  -exec rm {} \;
+    
     make4ht -c myconfig.cfg -u  -d ../web  optimized-complex.tex
 
     cd .. && git add . && git commit -m "commit by sn.." && git push && cd src
