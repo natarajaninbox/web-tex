@@ -30,7 +30,7 @@ sorting=none
 \bibliography{references}  
 
 \begin{document}
-\title{Integrated Control and Planning for Mobile Robots v1}
+\title{Integrated Control and Planning for Mobile Robots v1.1}
 \author{Veejay Karthik J\\
 Systems and Control Engineering\\
 IIT Bombay}
@@ -49,8 +49,7 @@ Mobile Robots are a class of \textbf{underactuated} systems with inherent \textb
 Here, $g(X)\in \mathbb{R}^{n\times m}$ is typically a lipschitz function. The configuration space is given by $\mathcal{Q}$ and the set of obstacles is denoted by $\mathcal{O}_i$. From these definitions, the free configuration space $\mathcal{Q}_{\text{free}}$ is obtained as follows,
 \begin{align}
     \label{eqn:FreeWorkspaces}
-    \centering
-    \mathcal{Q}_{\text{free}} = \{X\in\mathcal{Q}\;|\; X\cap\left(Q\cap (\cup_i \mathcal{O}_i)\right) = \emptyset \}
+    \mathcal{Q}_{\text{free}} = \{X \in \mathcal{Q} \,|\, X \cap (Q \cap (\cup_i \mathcal{O}_i)) = \emptyset\}
 \end{align}
 
 Suppose the initial conditions are given by $X_0$ at an initial time instant $t_0$ and the target goal is given by $X_f$ at a time instant $t=t_f$, a candidate motion plan $X_{\text{ref}}(t) \in Q$ is deemed admissible for navigation under the following conditions,
