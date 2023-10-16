@@ -1,13 +1,11 @@
  
 /* start css.sty */
 .cmr-7{font-size:70%;}
-.cmmi-5{font-size:50%;font-style: italic;}
 .cmmi-7{font-size:70%;font-style: italic;}
 .cmmi-10{font-style: italic;}
 .cmsy-7{font-size:70%;}
 .cmr-17{font-size:170%;}
 .cmr-12{font-size:120%;}
-.cmtt-10{font-family: monospace,monospace;}
 .cmbx-10{ font-weight: bold;}
 p{margin-top:0;margin-bottom:0}
 p.indent{text-indent:0;}
@@ -31,7 +29,7 @@ h1,h2,h3,h4,h5 { line-height:1.2; }
 .sectionHead, likesectionHead { font-size: 1.5157em; }
 .subsectionHead, likesubsectionHead { font-size: 1.3195em; }
 .subsubsectionHead, likesubsubsectionHead { font-size: 1.1487em; }
- @media (prefers-color-scheme: dark) { img[src^="test"]{filter: invert(1); } } 
+ @media (prefers-color-scheme: dark) { img[src^="main"]{filter: invert(1); } } 
 li p.indent { text-indent: 0em }
 li p:first-child{ margin-top:0em; }
 li p:last-child, li div:last-child { margin-bottom:0.5em; }
@@ -138,44 +136,6 @@ figcaption.caption {text-indent:-2em; margin-left:3em; margin-right:1em; text-al
 figcaption.caption span.id{font-weight: bold; white-space: nowrap; }
 p + figcaption, img + figcaption{margin-top: 1em;}
 .abstract{margin:1em;}
-.equation td{text-align:center; }
-.equation-star td{text-align:center; }
-table.equation-star { width:100%; }
-table.equation { width:100%; }
-table.align, table.alignat, table.xalignat, table.xxalignat, table.flalign {width:95%; margin-left:5%; white-space: nowrap;}
-table.align-star, table.alignat-star, table.xalignat-star, table.flalign-star {margin-left:auto; margin-right:auto; white-space: nowrap;}
-td.align-label { width:5%; text-align:center; }
-td.align-odd { text-align:right; padding-right:0.3em;}
-td.align-even { text-align:left; padding-right:0.6em;}
-table.multline, table.multline-star {width:100%;}
-td.gather {text-align:center; }
-table.gather {width:100%;}
-div.gather-star {text-align:center;}
-div.tabular, div.center div.tabular {text-align: center; margin-top:0.5em; margin-bottom:0.5em; }
-table.tabular td p{margin-top:0em;}
-table.tabular {margin-left: auto; margin-right: auto;}
-td p:first-child{ margin-top:0em; }
-td p:last-child{ margin-bottom:0em; }
-div.td00{ margin-left:0pt; margin-right:0pt; }
-div.td01{ margin-left:0pt; margin-right:5pt; }
-div.td10{ margin-left:5pt; margin-right:0pt; }
-div.td11{ margin-left:5pt; margin-right:5pt; }
-table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
-td.td00{ padding-left:0pt; padding-right:0pt; }
-td.td01{ padding-left:0pt; padding-right:5pt; }
-td.td10{ padding-left:5pt; padding-right:0pt; }
-td.td11{ padding-left:5pt; padding-right:5pt; }
-table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
-.hline hr, .cline hr{ height : 0px; margin:0px; }
-.hline td, .cline td{ padding: 0; }
-.hline hr, .cline hr{border:none;border-top:1px solid black;}
-.hline {border-top: 1px solid black;}
-.hline + .vspace:last-child{display:none;}
-.hline:first-child{border-bottom:1px solid black;border-top:none;}
-div.array {text-align:center;}
-#TBL-4-1{border-left: 1px solid black;}
-#TBL-4-1{border-right:1px solid black;}
-#TBL-4-2{border-right:1px solid black;}
-#TBL-4-3{border-right:1px solid black;}
+.rotatebox{display: inline-block;}
 /* end css.sty */
 
