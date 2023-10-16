@@ -32,8 +32,8 @@
     
     Suppose the initial conditions are given by $X_0$ at an initial time instant $t_0$, and the target goal is $X_f$ at $t=t_f$. A candidate motion plan $X_{\text{ref}}(t) \in Q$ is admissible for navigation if it satisfies the following conditions:
     \begin{itemize}
-        \item $X_{\text{ref}}(t)$ is a solution to (\ref{eqn:SystemDescription}), with $X_{\text{ref}}(t_0) = X_0$ and $X_{\text{ref}}(t_f) = X_f$.
-        \item $X_{\text{ref}}(t) \in \mathcal{Q}_{\text{free}},\; \forall t\in[t_0,t_f]$
+    \item $X_{\text{ref}}(t)$ is a solution to (\ref{eqn:SystemDescription}), with $X_{\text{ref}}(t_0) = X_0$ and $X_{\text{ref}}(t_f) = X_f$.
+    \item $X_{\text{ref}}(t) \in \mathcal{Q}_{\text{free}},\; \forall t\in[t_0,t_f]$
     \end{itemize}
     
     Under these conditions, the resulting motion plan $X_{\text{ref}}(t)$ is compliant for tracking through a carefully designed low-level tracking controller. This is crucial for operating in unknown environments where motion plans must be generated at runtime to achieve mission objectives based on sensed information.
