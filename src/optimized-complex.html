@@ -35,32 +35,35 @@ follows,
                                                                                          
 </p><table class='align'>
                            <tr><td class='align-odd'><span class='colorbox' id='colorbox1'><span class='cmsy-10'>𝒬</span><sub>free</sub> = <span class='cmsy-10'>{</span><span class='cmmi-10'>X </span><span class='cmsy-10'>∈𝒬| </span><span class='cmmi-10'>X </span><span class='cmsy-10'>∩</span><img align='middle' alt='(Q ∩(∪i𝒪i))' class='left' src='optimized-complex0x.png' /> = <span class='cmsy-10'>∅}</span></span></td>                           <td class='align-even'></td>                           <td class='align-label'><a id='x1-1002r2'></a>(2)                           </td></tr></table>
-<!-- l. 56 --><p class='noindent'><span class='cmmi-10'>Q</span><sub>free</sub> = <span class='cmsy-10'>{</span><span class='cmmi-10'>X </span><span class='cmsy-10'>∈ </span><span class='msbm-10'>ℚ</span><span class='cmsy-10'>∣</span><span class='cmmi-10'>X </span><span class='cmsy-10'>∩</span><img align='middle' alt='     ⋃
-(ℚ ∩ ( iOi))' class='left' src='optimized-complex1x.png' /> = <span class='cmsy-10'>∅}</span>
-</p><!-- l. 59 --><p class='noindent'>Suppose the initial conditions are given by <span class='cmmi-10'>X</span><sub><span class='cmr-7'>0</span></sub> at an initial time instant <span class='cmmi-10'>t</span><sub><span class='cmr-7'>0</span></sub> and the target goal is given by <span class='cmmi-10'>X</span><sub><span class='cmmi-7'>f</span></sub> at a
+<!-- l. 56 --><p class='noindent'>
+</p><table class='align'>
+                        <tr><td class='align-odd'><span class='cmsy-10'>𝒬</span><sub>free</sub> = <span id='textcolor2'>Qfree = <span class='cmsy-10'>{</span><span class='cmmi-10'>X </span><span class='cmsy-10'>∈𝒬|</span><span class='cmmi-10'>X </span><span class='cmsy-10'>∩ </span>(<span class='cmmi-10'>Q </span><span class='cmsy-10'>∩ </span>(<span class='cmsy-10'>∪</span><sub><span class='cmmi-7'>i</span></sub><span class='cmsy-10'>𝒪</span><sub><span class='cmmi-7'>i</span></sub>)) = <span class='cmsy-10'>∅}</span></span></td>                        <td class='align-even'></td>                        <td class='align-label'><a id='x1-1003r3'></a>(3)                        </td></tr></table>
+<!-- l. 62 --><p class='noindent'>Suppose the initial conditions are given by <span class='cmmi-10'>X</span><sub><span class='cmr-7'>0</span></sub> at an initial time instant <span class='cmmi-10'>t</span><sub><span class='cmr-7'>0</span></sub> and the target goal is given by <span class='cmmi-10'>X</span><sub><span class='cmmi-7'>f</span></sub> at a
 time instant <span class='cmmi-10'>t </span>= <span class='cmmi-10'>t</span><sub><span class='cmmi-7'>f</span></sub>, a candidate motion plan <span class='cmmi-10'>X</span><sub>ref</sub>(<span class='cmmi-10'>t</span>) <span class='cmsy-10'>∈ </span><span class='cmmi-10'>Q </span>is deemed admissible for navigation under the following
 conditions, </p>
      <ul class='itemize1'>
      <li class='itemize'><span class='cmmi-10'>X</span><sub>ref</sub>(<span class='cmmi-10'>t</span>) is a solution to (<a href='#x1-1001r1'>1<!-- tex4ht:ref: eqn:SystemDescription  --></a>), with <span class='cmmi-10'>X</span><sub>ref</sub>(<span class='cmmi-10'>t</span><sub><span class='cmr-7'>0</span></sub>) = <span class='cmmi-10'>X</span><sub><span class='cmr-7'>0</span></sub> and <span class='cmmi-10'>X</span><sub>ref</sub>(<span class='cmmi-10'>t</span><sub><span class='cmmi-7'>f</span></sub>) = <span class='cmmi-10'>X</span><sub><span class='cmmi-7'>f</span></sub>.
      </li>
      <li class='itemize'><span class='cmmi-10'>X</span><sub>ref</sub>(<span class='cmmi-10'>t</span>) <span class='cmsy-10'>∈𝒬</span><sub>free</sub><span class='cmmi-10'>, </span><span class='cmsy-10'>∀</span><span class='cmmi-10'>t </span><span class='cmsy-10'>∈ </span>[<span class='cmmi-10'>t</span><sub><span class='cmr-7'>0</span></sub><span class='cmmi-10'>,t</span><sub><span class='cmmi-7'>f</span></sub>]</li></ul>
-<!-- l. 64 --><p class='noindent'><span class='cmbx-10'>Under such conditions, the resulting motion plan </span><span class='cmmi-10'>X</span><sub><span class='cmbx-10'>ref</span></sub>(<span class='cmmi-10'>t</span>) <span class='cmbx-10'>is compliant for tracking through a
+<!-- l. 67 --><p class='noindent'><span class='cmbx-10'>Under such conditions, the resulting motion plan </span><span class='cmmi-10'>X</span><sub><span class='cmbx-10'>ref</span></sub>(<span class='cmmi-10'>t</span>) <span class='cmbx-10'>is compliant for tracking through a
 careful design of a low-level tracking controller</span>. (The final time argument condition could be
 optionally relaxed if required). <span class='cmti-10'>During operation in unknown environments, such amiable motion plans
 must be generated during run-time to accomplish the mission objectives based on the sensed information.</span>
 </p><figure class='figure' id='-caption-'> 
-<img alt='PIC' height='1445' src='media/turtlebot3_burger_components.png' width='1445' /> <a id='x1-1003r1'></a>
-<figcaption class='caption'><span class='id'>Figure 1: </span><span class='content'>Caption                                                                          </span></figcaption><!-- tex4ht:label?: x1-1003r1  -->
+<img alt='PIC' height='1445' src='media/turtlebot3_burger_components.png' width='1445' /> <a id='x1-1004r1'></a>
+<figcaption class='caption'><span class='id'>Figure 1: </span><span class='content'>Caption                                                                          </span></figcaption><!-- tex4ht:label?: x1-1004r1  -->
 </figure>
-<!-- l. 72 --><p class='noindent'>
+<!-- l. 75 --><p class='noindent'>
 </p>
 <h4 class='subsectionHead' id='integrated-planning-and-control-ipc'><span class='titlemark'>1.1   </span> <a id='x1-20001.1'></a>Integrated Planning and Control (IPC)</h4>
-<!-- l. 73 --><p class='noindent'>IPC algorithms <span class='cmbx-10'>seek motion plans as a sequence of feedback controllers over domains </span>in the navigable
+<!-- l. 76 --><p class='noindent'>IPC algorithms <span class='cmbx-10'>seek motion plans as a sequence of feedback controllers over domains </span>in the navigable
 regions of the environment, rather than an explicit path/trajectory in the configuration space of the system. The
 IPC motion plans exhibit the following properties, </p>
+                                                                                         
+                                                                                         
      <ul class='itemize1'>
      <li class='itemize'>
-     <!-- l. 75 --><p class='noindent'>Each domain <span class='cmsy-10'>𝒟</span><sub><span class='cmmi-7'>k</span></sub> is positively invariant under <span class='cmbx-10'>feedback controller </span><span class='cmsy-10'>ℱ</span><sub><span class='cmmi-7'>k</span></sub>, and is associated with a goal set
+     <!-- l. 78 --><p class='noindent'>Each domain <span class='cmsy-10'>𝒟</span><sub><span class='cmmi-7'>k</span></sub> is positively invariant under <span class='cmbx-10'>feedback controller </span><span class='cmsy-10'>ℱ</span><sub><span class='cmmi-7'>k</span></sub>, and is associated with a goal set
      <span class='cmsy-10'>𝒲</span><sub><span class='cmmi-7'>k</span></sub> <span class='cmsy-10'>⊂𝒟</span><sub><span class='cmmi-7'>k</span></sub>. Essentially, any initial state <span class='cmmi-10'>X</span>(<span class='cmmi-10'>t</span>) <span class='cmsy-10'>∈𝒟</span><sub><span class='cmmi-7'>k</span></sub> evolves such that it converges onto <span class='cmsy-10'>𝒲</span><sub><span class='cmmi-7'>k</span></sub> under the influence
      of <span class='cmsy-10'>ℱ</span><sub><span class='cmmi-7'>k</span></sub> while remaining within <span class='cmsy-10'>𝒟</span><sub><span class='cmmi-7'>k</span></sub> during the entire duration. Given a system as in (<a href='#x1-1001r1'>1<!-- tex4ht:ref: eqn:SystemDescription  --></a>), the following holds true,
      </p>
@@ -68,10 +71,8 @@ IPC motion plans exhibit the following properties, </p>
          <li class='itemize'>If <span class='cmmi-10'>X</span>(<span class='cmmi-10'>t </span>= <span class='cmmi-10'>t</span><sub><span class='cmr-7'>0</span></sub>) <span class='cmsy-10'>∈𝒟</span><sub><span class='cmmi-7'>k</span></sub>, then <span class='cmmi-10'>X</span>(<span class='cmmi-10'>t </span>= <span class='cmmi-10'>t</span><sub><span class='cmmi-7'>f</span></sub>) <span class='cmsy-10'>∈𝒲</span><sub><span class='cmmi-7'>k</span></sub> and <span class='cmmi-10'>X</span>(<span class='cmmi-10'>t</span>) <span class='cmsy-10'>∈𝒟</span><sub><span class='cmmi-7'>k</span></sub><span class='cmmi-10'>, </span><span class='cmsy-10'>∀</span><span class='cmmi-10'>t </span><span class='cmsy-10'>∈ </span>[<span class='cmmi-10'>t</span><sub><span class='cmr-7'>0</span></sub><span class='cmmi-10'>,t</span><sub><span class='cmmi-7'>f</span></sub>]</li></ul>
      </li>
      <li class='itemize'>
-     <!-- l. 79 --><p class='noindent'>The domains <span class='cmsy-10'>𝒟</span><sub><span class='cmmi-7'>k</span></sub> are sequenced in such a way that their goal sets <span class='cmsy-10'>𝒲</span><sub><span class='cmmi-7'>k</span></sub> lies on <span class='cmbx-10'>at least one other domain </span><span class='cmsy-10'>𝒟</span><sub><span class='cmmi-7'>i</span></sub>,
+     <!-- l. 82 --><p class='noindent'>The domains <span class='cmsy-10'>𝒟</span><sub><span class='cmmi-7'>k</span></sub> are sequenced in such a way that their goal sets <span class='cmsy-10'>𝒲</span><sub><span class='cmmi-7'>k</span></sub> lies on <span class='cmbx-10'>at least one other domain </span><span class='cmsy-10'>𝒟</span><sub><span class='cmmi-7'>i</span></sub>,
      and each <span class='cmsy-10'>𝒟</span><sub><span class='cmmi-7'>i</span></sub> <span class='cmsy-10'>⊂ </span><span class='cmmi-10'>Q</span><sub>free</sub>. (This ensures overall connectivity between the domains <span class='cmsy-10'>𝒟</span><sub><span class='cmmi-7'>k</span></sub>)
-                                                                                         
-                                                                                         
      </p><table class='align-star'>
                                    <tr><td class='align-odd'><span class='cmsy-10'>𝒲</span><sub><span class='cmmi-7'>k</span></sub> <span class='cmsy-10'>∈𝒟</span><sub><span class='cmmi-7'>i</span></sub><span class='cmmi-10'>,   i≠k</span></td>                                   <td class='align-even'></td>                                   <td class='align-label'></td></tr></table>
          <ul class='itemize2'>
@@ -80,7 +81,7 @@ IPC motion plans exhibit the following properties, </p>
          </li>
          <li class='itemize'>The final configuration <span class='cmsy-10'>𝒯 </span>in the navigation query is such that <span class='cmsy-10'>𝒯 ∈𝒲</span><sub><span class='cmmi-7'>k</span></sub> for some ‘<span class='cmmi-10'>k</span><span class='cmsy-10'>′</span>.</li></ul>
      </li></ul>
-<!-- l. 88 --><p class='noindent'>Depending on the current state of the system, the <span class='cmsy-10'>ℱ</span><sub><span class='cmmi-7'>k</span></sub> associated with the corresponding <span class='cmsy-10'>𝒟</span><sub><span class='cmmi-7'>k</span></sub> is applied to the
+<!-- l. 91 --><p class='noindent'>Depending on the current state of the system, the <span class='cmsy-10'>ℱ</span><sub><span class='cmmi-7'>k</span></sub> associated with the corresponding <span class='cmsy-10'>𝒟</span><sub><span class='cmmi-7'>k</span></sub> is applied to the
 system. Suppose the domains <span class='cmsy-10'>𝒟</span><sub><span class='cmmi-7'>k</span></sub> are sequenced in such a way that each <span class='cmsy-10'>𝒲</span><sub><span class='cmmi-7'>k</span></sub> lies on a unique <span class='cmsy-10'>𝒟</span><sub><span class='cmmi-7'>i</span></sub><span class='cmmi-10'>, i≠k</span>, the system’s
 trajectories are guaranteed to safely converge onto <span class='cmsy-10'>𝒯 </span>when the above-mentioned structures are established.
 <br class='newline' /><br class='newline' />Mathematically, the geometric structure of <span class='cmsy-10'>𝒟</span><sub><span class='cmmi-7'>k</span></sub> is a consequence of the underlying system dynamics for which

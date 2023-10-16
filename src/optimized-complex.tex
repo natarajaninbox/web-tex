@@ -53,9 +53,12 @@ Here, $g(X)\in \mathbb{R}^{n\times m}$ is typically a lipschitz function. The co
 \text{\colorbox{lightgray}{$\mathcal{Q}_{\text{free}} = \{X\in\mathcal{Q}\;|\; X\cap\left(Q\cap (\cup_i \mathcal{O}_i)\right) = \emptyset \}$}}
 \end{align}
 
-$Q_{\text{free}} = \{X \in \mathbb{Q} \mid X \cap \left(\mathbb{Q} \cap \left(\bigcup_{i} O_i\right)\right) = \emptyset\}$
-
-
+\begin{align}
+    \label{eqn:FreeWorkspaces}
+    \mathcal{Q}_{\text{free}} = \text{\textcolor{blue}{Qfree = $\{X \in \mathcal{Q} \,|\, X \cap (Q \cap (\cup_i \mathcal{O}_i)) = \emptyset\}$}}
+    \end{align}
+    
+    
 Suppose the initial conditions are given by $X_0$ at an initial time instant $t_0$ and the target goal is given by $X_f$ at a time instant $t=t_f$, a candidate motion plan $X_{\text{ref}}(t) \in Q$ is deemed admissible for navigation under the following conditions,
 \begin{itemize}
     \item $X_{\text{ref}}(t)$ is a solution to (\ref{eqn:SystemDescription}), with $X_{\text{ref}}(t_0) = X_0$ and $X_{\text{ref}}(t_f) = X_f$.
