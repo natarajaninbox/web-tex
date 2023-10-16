@@ -1,0 +1,59 @@
+\documentclass{article}
+    \usepackage{geometry}
+    \usepackage{amssymb}
+    \usepackage{amsmath}
+    \usepackage{graphicx}
+    \usepackage{xcolor}
+    \usepackage{hyperref}
+    \usepackage{float}
+    
+    \geometry{a4paper, margin=2.25cm}
+    
+    \title{Integrated Control and Planning for Mobile Robots}
+    \author{Veejay Karthik J\\ Systems and Control Engineering\\ IIT Bombay}
+    \date{August 2023}
+    
+    \begin{document}
+    \maketitle
+    
+    \section{Motivation}
+    
+    Mobile Robots are underactuated systems with non-holonomic constraints that restrict their maneuverability. Motion planning for these systems is complex, especially when obstacle configurations are unknown. The mathematical models for mobile robots are typically driftless and can be described as follows:
+    \begin{equation}
+    \dot{X} = g(X,U) \quad~;~\quad X \in Q \subseteq \mathbb{R}^n, U\in [U_m,U_M]\subset\mathbb{R}^m \quad~;~\quad m < n
+    \label{eqn:SystemDescription}
+    \end{equation}
+    
+    Here, $g(X)\in \mathbb{R}^{n\times m}$ is typically a Lipschitz function. The configuration space is given by $\mathcal{Q}$, and obstacles are denoted by $\mathcal{O}_i$. The free configuration space $\mathcal{Q}_{\text{free}}$ is defined as:
+    \begin{equation}
+    \mathcal{Q}_{\text{free}} = \{X\in\mathcal{Q}\;|\; X\cap\left(Q\cap (\cup_i \mathcal{O}_i)\right) = \emptyset \}
+    \label{eqn:FreeWorkspaces}
+    \end{equation}
+    
+    Suppose the initial conditions are given by $X_0$ at an initial time instant $t_0$, and the target goal is $X_f$ at $t=t_f$. A candidate motion plan $X_{\text{ref}}(t) \in Q$ is admissible for navigation if it satisfies the following conditions:
+    \begin{itemize}
+        \item $X_{\text{ref}}(t)$ is a solution to (\ref{eqn:SystemDescription}), with $X_{\text{ref}}(t_0) = X_0$ and $X_{\text{ref}}(t_f) = X_f$.
+        \item $X_{\text{ref}}(t) \in \mathcal{Q}_{\text{free}},\; \forall t\in[t_0,t_f]$
+    \end{itemize}
+    
+    Under these conditions, the resulting motion plan $X_{\text{ref}}(t)$ is compliant for tracking through a carefully designed low-level tracking controller. This is crucial for operating in unknown environments where motion plans must be generated at runtime to achieve mission objectives based on sensed information.
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.5]{media/turtlebot3_burger_components.png}
+        \caption{Caption}
+        \label{fig:enter-label}
+    \end{figure}
+    
+    \subsection{Integrated Planning and Control (IPC)}
+    IPC algorithms seek motion plans as a sequence of feedback controllers over domains in navigable regions of the environment. Instead of explicit path/trajectory planning, these plans rely on feedback controllers associated with domains. The properties of IPC motion plans include:
+    \begin{itemize}
+        \item Each domain $\mathcal{D}_k$ is positively invariant under feedback controller $\mathcal{F}_k$ and is associated with a goal set $\mathcal{W}_k \subset \mathcal{D}_k$.
+        \item The domains $\mathcal{D}_k$ are sequenced to ensure overall connectivity between domains, and the system's trajectories are guaranteed to safely converge onto the final configuration.
+    
+    \end{itemize}
+    
+    In summary, IPC algorithms offer a computational geometry-based approach to mobile robot navigation, which can often be more efficient than optimization-based methods. This makes them suitable for real-time decision-making in unknown or dynamic environments.
+    
+    \end{document}
+    
