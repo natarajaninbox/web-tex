@@ -52,7 +52,9 @@ Here, $g(X)\in \mathbb{R}^{n\times m}$ is typically a lipschitz function. The co
 \label{eqn:FreeWorkspaces}
 \text{\colorbox{lightgray}{$\mathcal{Q}_{\text{free}} = \{X\in\mathcal{Q}\;|\; X\cap\left(Q\cap (\cup_i \mathcal{O}_i)\right) = \emptyset \}$}}
 \end{align}
-    
+
+$Q_{\text{free}} = \{X \in \mathbb{Q} \mid X \cap \left(\mathbb{Q} \cap \left(\bigcup_{i} O_i\right)\right) = \emptyset\}$
+
 
 Suppose the initial conditions are given by $X_0$ at an initial time instant $t_0$ and the target goal is given by $X_f$ at a time instant $t=t_f$, a candidate motion plan $X_{\text{ref}}(t) \in Q$ is deemed admissible for navigation under the following conditions,
 \begin{itemize}
@@ -62,7 +64,7 @@ Suppose the initial conditions are given by $X_0$ at an initial time instant $t_
 \textbf{Under such conditions, the resulting motion plan $X_{\text{ref}}(t)$ is compliant for tracking through a careful design of a low-level tracking controller}. (The final time argument condition could be optionally relaxed if required). \textit{During operation in unknown environments, such amiable motion plans must be generated during run-time to accomplish the mission objectives based on the sensed information.}
 \begin{figure}
     \centering
-    \includegraphics[scale=0.5]{media/turtlebot3_burger_components.png}
+    \includegraphics[scale=20]{media/turtlebot3_burger_components.png}
     \caption{Caption}
     \label{fig:enter-label}
 \end{figure}
