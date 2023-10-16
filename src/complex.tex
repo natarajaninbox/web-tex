@@ -44,8 +44,7 @@ IIT Bombay}
 Mobile Robots are a class of \textbf{underactuated} systems with inherent \textbf{non-holonomic constraints} that restrict their maneuverability. In practice, they are often deployed in space-constrained operating workspaces. Therefore, motion planning for such systems becomes a complex task, and it is significantly challenging when the exact obstacle configuration is not known beforehand. The mathematical models (unicycle, bicycle,etc) for mobile robots are typically driftless , and exhibit the following structure,
 \begin{align}
 \label{eqn:SystemDescription}
-\centering
-\dot{X} = g(X,U) \quad~;~\quad X \in Q \subseteq \mathbb{R}^n, U\in [U_m,U_M]\subset\mathbb{R}^m \quad~;~\quad m < n
+\dot{X} = g(X,U) \quad~;~\quad X \in Q \subseteq \mathbb{R}^n, U\in [U_m,U_M]\subset\mathbb{R}^m \quad~;~\quad m< n
 \end{align}
 Here, $g(X)\in \mathbb{R}^{n\times m}$ is typically a lipschitz function. The configuration space is given by $\mathcal{Q}$ and the set of obstacles is denoted by $\mathcal{O}_i$. From these definitions, the free configuration space $\mathcal{Q}_{\text{free}}$ is obtained as follows,
 \begin{align}
