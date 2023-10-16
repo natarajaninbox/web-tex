@@ -1,3 +1,4 @@
+# Unwanted Make4ht Compiled Files
 *.log
 *.tmp
 *.4ct
@@ -6,3 +7,7 @@
 *.run.xml
 *.idv
 *.xref
+*.lg 
+*.aux 
+*.bcf
+
