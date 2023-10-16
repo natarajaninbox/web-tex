@@ -25,3 +25,12 @@
 
 ## Overleaf Integration
     https://www.kodymirus.cz/overleaf-html-sample/main.html
+
+## Few Commands
+``` 
+natarajanselvaraj@NLWQWFT713  ~/GitHub/web-tex/src   main  pwd
+/Users/natarajanselvaraj/GitHub/web-tex/src
+```
+    find . -type f ! -name "*.tex" -exec rm -f {} \;
+    make4ht -u  -d ../web  complex.tex
+    make4ht -u  -d ../web  sample.tex
