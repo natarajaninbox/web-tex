@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1697415251 "/Users/natarajanselvaraj/GitHub/web-tex/src/basic.tex" "basic.pdf" "basic" 1697415251 0
+["pdflatex"] 1697415330 "/Users/natarajanselvaraj/GitHub/web-tex/src/basic.tex" "basic.pdf" "basic" 1697415331 0
   "/Users/natarajanselvaraj/GitHub/web-tex/src/basic.tex" 1697415250 1448 089b365aabc2dfcb5185ae6184316e66 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -82,8 +82,8 @@
   "/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1696046493 4623355 b8cad38412faebe1ce5b780a45db67bd ""
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1696046401 7883454 42d26eacdba698cb7451737218f61857 ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "basic.aux" 1697415251 554 04ae3964aa57b78538b565d0454a3de2 "pdflatex"
-  "basic.out" 1697415251 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "basic.aux" 1697415331 554 04ae3964aa57b78538b565d0454a3de2 "pdflatex"
+  "basic.out" 1697415331 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "basic.tex" 1697415250 1448 089b365aabc2dfcb5185ae6184316e66 ""
   "media/raptor.jpg" 1697415184 2824 8f80888d6f669fe06a6a02567fa24d18 ""
   (generated)
